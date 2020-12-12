@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title slot="start">CDE</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="authService.id as usercde">
+  <ion-grid>
+    <ion-item lines="none">
+      <ion-icon slot="end" name="power" color="danger" (click)="authService.SignOut()" expand="block"></ion-icon>
+      <ion-item lines="none">
+        <h2>{{usercde.instituto}}</h2>
+      </ion-item>
+    </ion-item>
+
+    
+    <ion-row>
+      <ion-col size="5">
+        <ion-item lines="none" class="ion-no-padding">
+          <ion-img src="{{usercde.foto}}"></ion-img>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="7" class="ion-text-start">
+
+        <ion-item lines="none" class="user-list ion-no-padding">
+          <ion-label class="ion-no-margin">Nome</ion-label>
+        </ion-item>
+        <ion-item class="user-nomes ion-no-padding">
+          <ion-label class="ion-no-margin">{{usercde.nome}}</ion-label>
+        </ion-item>
+
+        <ion-item lines="none" class="user-list ion-no-padding">
+          <ion-label class="ion-no-margin"><br>Matrícula</ion-label>
+        </ion-item>
+        <ion-item class="user-nomes ion-no-padding">
+          <ion-label class="ion-no-margin">{{usercde.matricula}}</ion-label>
+        </ion-item>
+
+      </ion-col>
+    </ion-row>
+
+    <br>
+    <br>
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none" class="user-list">
+          <ion-label class="ion-no-margin">Curso</ion-label>
+        </ion-item>
+        <ion-item class="user-nomes">
+          <ion-label class="ion-no-margin">{{usercde.curso}}</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <br>
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none" class="user-list">
+          <ion-label class="ion-no-margin">Situação da Matrícula</ion-label>
+        </ion-item>
+        <ion-item class="user-nomes">
+          <ion-label class="ion-no-margin">{{usercde.situacao}}</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <br>
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none" class="user-list">
+          <ion-label class="ion-no-margin">Período</ion-label>
+        </ion-item>
+        <ion-item class="user-nomes">
+          <ion-label class="ion-no-margin">{{usercde.periodo}}</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <br>
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none" class="user-list">
+          <ion-label class="ion-no-margin">Previsão de Término do Curso</ion-label>
+        </ion-item>
+        <ion-item class="user-nomes">
+          <ion-label class="ion-no-margin">{{usercde.termino}}</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom" color="light">
+      <ion-tab-button>
+        <ion-icon name="book"></ion-icon>
+        <ion-label>Plano de Estudo</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button>
+        <ion-icon name="albums"></ion-icon>
+        <ion-label>Documentos</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button>
+        <ion-icon name="chatbubbles"></ion-icon>
+        <ion-label>Falar com a Instituição</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

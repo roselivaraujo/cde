@@ -1,0 +1,7 @@
+{
+  "name": "Carteirinha Digital do Estudante",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
